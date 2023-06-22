@@ -22,7 +22,15 @@ function requestApi(data) {
         productImg.src = data[i].imageUrl;
         productImg.alt = data[i].altTxt;
 
-        // Ecrire le reste du code pour générer le DOM ici
+        let productName = document.createElement('h3');
+        productArticle.appendChild(productName);
+        productName.classList.add('productName');
+        productName.textContent = data[i].name;
+
+        let productDescription = document.createElement('p');
+        productArticle.appendChild(productDescription);
+        productDescription.classList.add('productDescription');
+        productDescription.textContent = data[i].description;
     }
 }
 
